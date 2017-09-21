@@ -67,10 +67,10 @@ gulp.task("jsbuild", function(){
 gulp.task("htmlBuild", function(){
   browserSync.reload();
 });
-gulp.task("cssBuild", function(){
+gulp.task("cssBuild",["sassBuild"], function(){
   browserSync.reload();
 });
-gulp.task("tsBuild", function(){
+gulp.task("tsBuild",["ts"], function(){
   browserSync.reload();
 });
 gulp.task("serve", ["build"], function(){
