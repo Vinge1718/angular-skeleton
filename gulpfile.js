@@ -19,8 +19,9 @@ var browserSync = require("browser-sync").create();
 var shell = require("gulp-shell");
 var sass = require("gulp-sass");
 var sourcemaps = require("gulp-sourcemaps");
-
+// global build task with individual clean tasks as dependencies.
 gulp.task("build", ["ts"], function(){
+  // we can use the buildProduction environment variable here later.
   gulp.start("bower");
   gulp.start("sassBuild")
 });
